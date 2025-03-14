@@ -14,7 +14,7 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
-  "nxCloudId": "6750280b426ab2447467d096",
+  "nxCloudId": "67d40bed06e383ce7f444c70",
   "targetDefaults": {
     "@nx/esbuild:esbuild": {
       "cache": true,
@@ -23,17 +23,10 @@
     }
   },
   "plugins": [
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint"
-      }
-    },
+    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
     {
       "plugin": "@nx/jest/plugin",
-      "options": {
-        "targetName": "test"
-      },
+      "options": { "targetName": "test" },
       "exclude": [
         "apps/mcp-neo4j-e2e/**/*",
         "mcp-neo4j-memory-e2e/**/*",
@@ -41,13 +34,7 @@
         "servers/mcp-json-memory-e2e/**/*"
       ]
     },
-    {
-      "plugin":"@nxlv/python"
-    }
+    { "plugin": "@nxlv/python" }
   ],
-  "release": {
-    "version": {
-      "preVersionCommand": "npx nx run-many -t build"
-    }
-  }
+  "release": { "version": { "preVersionCommand": "npx nx run-many -t build" } }
 }
